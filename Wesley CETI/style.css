@@ -1,0 +1,114 @@
+
+
+/* Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Fundo claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #07dada; /* Rosa choque (cor vibrante de Carnaval) */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #ffcc00; /* Dourado */
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #000;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo principal */
+}
+
+/* Seção da Galeria */
+.galeria {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.galeria h2 {
+    color: #00bcd4; /* Azul turquesa */
+    margin-bottom: 30px;
+}
+
+.imagens-container {
+    display: flex; /* Habilita o layout flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço */
+    gap: 20px; /* Espaço entre as imagens */
+    justify-content: center; /* Centraliza as imagens */
+}
+
+.imagem-item {
+    flex-basis: 22%; /* Cada item ocupa cerca de 1/4 do espaço, deixando espaço para o gap */
+    min-width: 250px; /* Garante que a imagem não fique muito pequena em telas menores */
+    border: 3px solid #ff9800; /* Laranja vibrante */
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem se ajuste ao item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.imagem-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.imagem-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer, cortando se necessário */
+    display: block;
+}
+
+.legenda {
+    padding: 10px;
+    background-color: #fff;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Seção Sobre */
+.sobre {
+    background-color: #fff;
+    padding: 30px;
+    border-left: 5px solid #4caf50; /* Verde */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sobre h2 {
+    color: #4caf50;
+}
+
+footer {
+    background-color: #15fc00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Media Query para telas menores (como celulares) */
+@media (max-width: 600px) {
+    .imagens-container {
+        flex-direction: column; /* Empilha as imagens verticalmente */
+        align-items: center;
+    }
+    
+    .imagem-item {
+        flex-basis: 90%; /* Ocupa quase a largura total */
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+}
